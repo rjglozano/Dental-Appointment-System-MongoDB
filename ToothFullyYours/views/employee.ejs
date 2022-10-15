@@ -1,0 +1,43 @@
+<!-- include header -->
+
+<%-include('include/_header-employee')%>
+<!-- include header -->
+
+ <!-- Main Site --> 
+ <main id="site-main">
+    <div class="employee-container">
+        <div class="table-employee-header">
+            <h3 class="text-center text-white text-normal">Employee List</h3>
+        </div>
+        <form action="/" method="POST">
+            <table id="add-employee">
+                <thead class="">
+                    <tr>
+                        <th>No</th>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>View/Edit/Delete</th>
+                    </tr>
+                </thead>
+                    <tbody id="myTable">
+                        <%-include('include/_show')%>
+                    </tbody>
+               
+            </table>
+        </form>
+    </div>
+    <div class="employee-button jc-end">
+        <button class="btn-employee">
+                <a href="/add-employee" class=" d-flex al-center">
+                    <div class="name-btn text-uppercase ">Add Employee</div>
+                </a>
+        </button>    
+    </div>
+   </main>
+
+<!-- Main Site --> 
+
+<!-- include footer -->
+<%-include('include/_footer-admin')%>
+<!-- include footer --> 

@@ -1,0 +1,37 @@
+<div class="form-container">
+<form action="/api/history" method="POST" id="add_history">
+    <div class="new_history">
+        <div class="col-two">
+            <div class="form-group">
+                <label for="transNo" class="text-light">Transaction Number:</label>
+                <input type="hidden" name="id" value="">
+                <input type="number" name="transNo" value="100" required>
+            </div>
+            <div class="form-group">
+                <label for="phdate" class="text-light">Date: </label>
+                <input type="date" class="no-border" placeholder="dd-mm-yyyy" name="phdate" required>
+            </div>
+        </div>
+        <div class="col-two">
+            <div  class="form-group">
+                <label for="toothNo" class="text-light">Tooth Number: </label>
+                <input type="text" name="toothNo" value="" required>
+            </div>
+            <div  class="form-group">
+                <label for="procedure" class="text-light">Procedure: </label>
+                <input type="text" name="procedure" value="" required>
+            </div>
+        
+        </div>
+        <div class="col-one">
+            <div  class="form-group">
+                <label for="payments" class="text-light">Payment:</label>
+                <input type="number" name="payments" value="" required>
+            </div>
+        </div> 
+        </div>
+        <div class="form-group al-end">
+            <button type="submit" class="btn text-style text-uppercase update">Submit</button>
+        </div>  
+</form>
+</div>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Website/Appointment-Request/Appointment/assets/css/financialStatement.css">
+
+
+</head>
+<body>
+   <!-- Header --> 
+   <header>
+    <nav>
+        <ul>
+            <li><a href="">Requests</a></li>
+            <li><a href="">Appointment</a></li>
+            <li><a href="">Patient</a></li>
+            <li><a href="">Employee</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="">Inventory</a></li>
+            <li><a href="financial_statement.html">Finance</a></li>
+            <li><a href="index.html"><button class="logout-btn">Logout</button></a></li>
+        </ul>
+    </nav>
+</header>
+ <!-- Header -->
+ <!-- Main --> 
+ <main>
+    <div class="container">
+    <h1 class="profit-loss-title">PROFIT & LOSS</h1>
+    <div class="profit-loss-container">
+        <div class="profit-loss-container-header">
+            <p id="ordinaryIncome-expe" >Ordinary Income/Expense</p>
+            <p id="m1">JANUARY</p>
+            <p id="m2">FEBRUARY</p>
+            <p id="m3">MARCH</p>
+        </div>
+        <table>
+            <tr>
+                <th id="">Income</th>
+
+            </tr>
+            <tr class="patienRevenue-container">
+                <td id="Demo">Patient Revenue</td> 
+              
+            <td> <input type="text" id="n1"/><br/><br/></td>   
+            <td> <input type="text" id="n3"/><br/><br/></td>  
+            <td> <input type="text" id="n5"/><br/><br/></td>  
+
+                     
+        </tr>
+           
+            <tr>
+                <td id="">Total Income</td>
+                
+                <td><input type="text" id="n2"/><br/><br/></td> 
+                <td><input type="text" id="n4"/><br/><br/></td>
+                <td> <input type="text" id="n6"/><br/><br/></td>  
+ 
+              
+                
+
+            </tr>
+        </table>
+
+        <div class="line-separator">
+
+            <table>
+
+
+                <tr>
+                    <th>Gross Profit </th>   
+                       <td><input type="text" placeholder="Total" id="result"></td> 
+                      <td> <input type="text"  placeholder="Total"id="result2"></td> 
+                       <td><input type="text"  placeholder="Total"id="result3"></td> 
+        
+                
+        
+                    
+                    </tr>
+            </table>
+      
+        </div>
+
+        <table>
+            <tr>
+                <th id="">Expense</th>
+            </tr>
+            <tr>
+                <td id="">Dental Supplies</td>
+                <td><input type="text" id="ds1"/><br/><br/></td> 
+                <td><input type="text" id="ds2"/><br/><br/></td> 
+                <td><input type="text" id="ds3"/><br/><br/></td> 
+            </tr>
+            <tr>
+                <td id="">Laboratory Fee</td>
+                <td><input type="text" id="lbf1"/><br/><br/></td> 
+                <td><input type="text" id="lbf2"/><br/><br/></td> 
+                <td><input type="text" id="lbf3"/><br/><br/></td> 
+            </tr>
+            <tr>
+                <td>Staff Payroll & Benefits</td>
+                <td><input type="text" id="stf1"/><br/><br/></td> 
+                <td><input type="text" id="stf2"/><br/><br/></td> 
+                <td><input type="text" id="stf3"/><br/><br/></td> 
+
+            </tr>
+            <tr>
+                <td id ="marketing">Marketing</td>
+                <td><input type="text" id="mk1"/><br/><br/></td> 
+                <td><input type="text" id="mk2"/><br/><br/></td> 
+                <td><input type="text" id="mk3"/><br/><br/></td> 
+
+            </tr>
+            <tr>
+                <td id ="rent">Rent</td>
+                <td><input type="text" id="rent1"/><br/><br/></td> 
+                <td><input type="text" id="rent2"/><br/><br/></td> 
+                <td><input type="text" id="rent3"/><br/><br/></td> 
+
+            </tr>
+            <tr>
+                <td id="" >General Admin & Overhead 
+                    (Electricity, Water, etc.)</td>
+
+                    <td><input type="text" id="admin1"/><br/><br/></td> 
+                <td><input type="text" id="admin2"/><br/><br/></td> 
+                <td><input type="text" id="admin3"/><br/><br/></td> 
+
+            </tr>
+        </table>
+        <div class="profit-loss-headers">
+
+            <tr>
+            <th id="netOrdinaryIncome">Total Expense</th>
+            <td><input placeholder="total"type="text" id="noitotal1"/></td> 
+            <td><input placeholder="total" type="text" id="noitotal2"/></td>
+            <td><input placeholder="total" type="text" id="noitotal3"/></td>
+
+            </tr>
+        </div>
+        <table>
+            <tr>
+                <th>Other Income/Expense</th>
+                
+            </tr>
+            <tr>
+                <td id="" >Interest Income</td>
+                <td><input type="text" id="interestIncome1"/><br/><br/></td> 
+                <td><input type="text" id="interestIncome2"/><br/><br/></td> 
+                <td><input type="text" id="interestIncome3"/><br/><br/></td> 
+
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th id="" >Total Other Income</th>
+                <td><input placeholder="total"type="text" id="totaOtherIncome1"/></td> 
+                <td><input placeholder="total"type="text" id="totaOtherIncome2"/></td> 
+                <td><input placeholder="total"type="text" id="totaOtherIncome3"/></td> 
+
+            </tr>
+        
+        </table>
+        <table>
+            <tr>
+                <th id="otherExpenses" >Other Expenses</th>
+                <td><input type="text" id="otherExepense1"/></td> 
+                <td><input type="text" id="otherExepense2"/></td> 
+                <td><input type="text" id="otherExepense3"/></td> 
+            </tr>
+        
+           
+         
+
+        </table>
+
+        <table>
+            <tr>
+                <th id="totalOtherExepenses ">Total Other Expenses</th>
+                <td><input type="text" id="totalotherExepense1"/></td> 
+                <td><input type="text" id="totalotherExepense2"/></td> 
+                <td><input type="text" id="totalotherExepense3"/></td> 
+
+
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <div class="line-separator">
+        
+          
+
+        </div>
+        <div class="profit-loss-headers">
+            <tr>
+            <th id="netIncome"> NET INCOME:</th>
+            <td><input placeholder ="Total Net Income"type="text" id="total_net_income1"/> </td>
+            <td><input placeholder ="Total Net Income" type="text" id="total_net_income2"/> </td> 
+            <td><input  placeholder ="Total Net Income"type="text" id="total_net_income3"/> </td> 
+ 
+
+
+                </tr>
+        </div>
+        </div>
+        <td><button onclick="calc();"> SAVE</button>
+            <td><button onclick=""> UPDATE</button>
+
+</div>
+
+ </main>
+  <!-- Main --> 
+
+  <script src="/Website/Appointment-Request/Appointment/assets/js/financial_statment.js"></script>
+ </body>
+ </html>
