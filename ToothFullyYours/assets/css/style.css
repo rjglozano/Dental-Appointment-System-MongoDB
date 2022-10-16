@@ -532,3 +532,20 @@ button[type=submit]:hover {
    margin: 0 0.2rem;
 }
 
+.footer{
+    width: 100%;
+    display: flex;
+    color: #fff;
+    padding: 1rem;
+    background-color: #1EBEB6;
+    justify-content: center;
+    align-items: center;
+}
+
+.email{
+    margin: 1rem;
+}
+
+.numer{
+    margin: 1rem;
+}
