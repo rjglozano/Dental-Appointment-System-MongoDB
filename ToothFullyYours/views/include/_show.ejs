@@ -1,0 +1,27 @@
+<% for(var i =0; i < employee.length; i++){%>
+    <tr class="clickable-row">
+        <td><%= i + 1 %></td>
+        <td><%=employee[i].e_ID %></td>
+        <td><%=employee[i].e_name %></td>
+        <td><%=employee[i].e_position %></td>
+        <td>
+            <div class="view-edit-delete"> 
+                <div class="function">
+                    <a href="/view-employee?id=<%=employee[i]._id%>" class="">
+                        <span class="text-gradient"><i class="fa-solid fa-eye"></i>View</span>
+                    </a>
+                 </div>
+                 <div class="function">
+                    <a href="/update-employee?id=<%=employee[i]._id%>" class="">
+                        <span class="text-gradient"><i class="fa-solid fa-pen-nib"></i>Edit</span>
+                    </a>
+                </div>
+                <div class="function">
+                    <a class="d-flex al-center delete" data-id=<%=employee[i]._id%>>
+                        <span class="text-gradient"><i class="fa-solid fa-x" aria-hidden="1"></i>Delete</span>
+                    </a>
+            </div>
+         </div>
+        </td>
+    </tr>
+    <% } %>

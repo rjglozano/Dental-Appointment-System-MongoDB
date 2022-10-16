@@ -1,0 +1,16 @@
+<% for(var i =0; i < appointmentRequest.length; i++){%>
+    <tr class="clickable-row">
+        <td><%= i + 1 %></td>
+        <td><%=appointmentRequest[i].p_name %></td>
+        <td><%=appointmentRequest[i].p_email %></td>
+        <td><%=appointmentRequest[i].p_phoneNum %></td>
+        <td><%=appointmentRequest[i].p_ap_date %></td>
+        <td><%=appointmentRequest[i].p_ap_time %></td>
+        <td><%=appointmentRequest[i].p_procedure%></td>
+        <td>
+            <a class="d-flex jc-center delete" data-id=<%=appointmentRequest[i]._id%>>
+                <span class="text-gradient"><i class="fa-solid fa-check" aria-hidden="1"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
