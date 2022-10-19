@@ -1,0 +1,20 @@
+<% for(var i = 0; i < finance.length; i++) { %>
+
+    <tr>
+        <td><%= i+1 %></td>
+        <td><%= finance[i].grossProfit %></td>
+        <td><%= finance[i].totalExpense %></td>
+        <td><%= finance[i].totalOtherIncome %></td>
+        <td><%= finance[i].totalOtherExpenses %></td>
+        <td><%= finance[i].netIncome %></td>
+        <td>
+            <a href="/view-finance?id=<%= finance[i]._id %>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fa-solid fa-eye"></i></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%=finance[i]._id %>>
+                <span class="text-gradient"><i class= "fa-solid fa-trash"></i></span>
+            </a>
+        </td>
+    </tr>
+    
+    <% } %>

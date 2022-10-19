@@ -1,0 +1,22 @@
+
+
+<% for(var i =0; i < patient.length; i++){%>
+<tr class="clickable-row">
+    <td><%= i + 1 %></td>
+    <td><%=patient[i].p_name%></td>
+    <td><%=patient[i].p_email %></td>
+    <td><%=patient[i].p_phoneNum %></td>
+    <td><%=patient[i].p_gender%></td>
+    <td><%=patient[i].p_age %></td>
+
+    <td>
+        <a href="/update-patient?id=<%=patient[i]._id%>" class=" d-flex al-center">
+            <span class="text-gradient"><i class="fa-solid fa-eye"></i></span>
+        </a>
+        <!-- <a class="d-flex al-center delete" data-id=<%=patient[i]._id%>>
+            <span class="text-gradient"><i class="fa-solid fa-x" aria-hidden="1"></i></span>
+        </a> -->
+    </td>
+
+</tr>
+<% } %>

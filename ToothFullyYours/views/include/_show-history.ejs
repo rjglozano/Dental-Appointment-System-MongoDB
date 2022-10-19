@@ -1,0 +1,22 @@
+<% for(var i =0; i < history.length; i++){%>
+<tr class="clickable-row">
+    <td><%= i + 1 %></td>
+    <td><%=history[i].p_name %></td>
+    <td><%=history[i].p_transNo%></td>
+    <td><%=history[i].p_ap_date %></td>
+    <td><%=history[i].p_procedure%></td>
+    <td><%=history[i].p_amount %></td>
+
+
+
+
+    <td>
+        <a href="/update-history?id=<%=history[i]._id%>" class=" d-flex al-center">
+            <span class="text-gradient"><i class="fa-solid fa-pen-nib"></i></span>
+        </a>
+        <a class="d-flex al-center delete" data-id=<%=history[i]._id%>>
+            <span class="text-gradient"><i class="fa-solid fa-x" aria-hidden="1"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

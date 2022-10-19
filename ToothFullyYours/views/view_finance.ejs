@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/finance-view.css">
+
+
+</head>
+<body>
+   <!-- Header --> 
+   <header>
+    <nav>
+        <ul>
+            <li><a href="/Request">Requests</a></li>
+            <li><a href="/appointment">Appointment</a></li>
+            <li><a href="/history">Transactions</a></li>
+            <li><a href="/employee">Employee</a></li>
+            <li><a href="/Patient">Patient</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="/Inventory">Inventory</a></li>
+            <li><a href="/finance">Finance</a></li>
+            <li><a href="/logout">
+                <button class="logout-btn">Logout</button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+ <!-- Header -->
+ <!-- Main --> 
+ <main>
+    <div class="box-nav d-flex justify-between">
+        <div class="filter">
+            <a href="/finance"><i class="fas fa-angle-double-left"></i>All Finance</a>
+        </div>
+    </div>
+    <div class="container">
+        
+    <h1 class="profit-loss-title">VIEW PROFIT & LOSS</h1>
+    <div class="profit-loss-container">
+        <div class="profit-loss-container-header">
+            <p id="ordinaryIncome-expe" >Ordinary Income/Expense</p>
+     <form class="form-group" id="update_finance" action="/api/finance">
+            <p name ="month" id="currentMonth"> currentMonth </p>
+            <input type="hidden" value="currentMonth "> 
+        </div>
+                <tr>
+                    <p id="incomeText">Income </p>
+    
+                 <table>
+                </tr>
+                <tr class="patienRevenue-container">
+                    <td width="50" id="Demo">Patient Revenue</td>      
+                <td> <input autocomplete="off" class="revtxtfield" required type="text" name = "patientRev1" id="n1" value="<%=finance.patientRevenue%>" readonly/><br/><br/></td>   
+                 
+            </tr>
+            <tr>
+                <td id="">Total Income</td>
+                
+           <td><input autocomplete="off"  required name = "totalInc1" type="text" id="n2" value="<%=finance.totalIncome%>" readonly/><br/><br/></td> 
+     
+            </tr>
+        </table>
+
+        <div class="profit-loss-headers">
+
+            <table>
+
+
+                <tr>
+                    <td>Gross Profit </td>   
+                       <td><input autocomplete="off" readonly   name = "gp1"  type="text" placeholder="Total" id="result" value="<%=finance.grossProfit%>" readonly ></td> 
+                   
+                    
+                    </tr>
+            </table>
+      
+        </div>
+
+        <table>
+            <tr>
+                <th id="">Expense</th>
+            </tr>
+            <tr>
+                <td id="">Dental Supplies</td>
+                <td><input autocomplete="off"  required name = "dps1"  type="text" id="ds1" value="<%=finance.dentalSupplies%>"readonly /><br/><br/></td> 
+              
+            <tr>
+                <td id="">Laboratory Fee</td>
+                <td><input  autocomplete="off" required name = "labfee1" type="text" id="lbf1"  value="<%=finance.laboratoryfee%>" readonly/><br/><br/></td> 
+            </tr>
+            <tr>
+                <td>Staff Payroll & Benefits</td>
+                <td><input  autocomplete="off" required name = "payroll1"type="text" id="stf1" value="<%=finance.staffPayroll%>" readonly/><br/><br/></td> 
+
+            </tr>
+            <tr>
+                <td id ="marketing">Marketing</td>
+                <td><input autocomplete="off" required name = "marketing1" type="text" id="mk1" value="<%=finance.Marketing%>" readonly/><br/><br/></td> 
+
+            </tr>
+            <tr>
+                <td id ="rent">Rent</td>
+                <td><input autocomplete="off" required name = "rent1" type="text" id="rent1" value="<%=finance.rent%>" readonly/><br/><br/></td> 
+
+            </tr>
+            <tr>
+                <td id="" >General Admin & Overhead 
+                    (Electricity, Water, etc.)</td>
+
+                    <td><input  autocomplete="off" required name = "admin1" type="text" id="admin1" value="<%=finance.generalAdmin%>" readonly/><br/><br/></td> 
+
+            </tr>
+        </table>
+
+        
+        <div class="profit-loss-headers">
+<table>
+            <tr>
+            <th id="netOrdinaryIncome">Total Expense</th>
+            <td><input  autocomplete="off" readonly name = "totalexpense1" placeholder="Total"type="text" id="noitotal1"  value="<%=finance.totalExpense%>" readonly/></td> 
+
+            </tr>
+
+            </table>
+        </div>
+
+
+        <p id="otherIncomeText">Other Income/Expense</p>
+        <table>
+            <tr>
+               
+                
+            </tr>
+            <tr>
+                <td id="" >Interest Income</td>
+                <td><input autocomplete="off"  required name = "interestInc1"type="text" id="interestIncome1" value="<%=finance.interestIncome%>" readonly/><br/><br/></td> 
+
+            </tr>
+        </table>
+
+
+
+
+        <table>
+            <tr>
+                <th id="" >Total Other Income</th>
+                <td><input autocomplete="off" readonly name = "otherIncome1" placeholder="Total"type="text" id="totaOtherIncome1"  value="<%=finance.totalOtherIncome%>" readonly/></td> 
+
+            </tr>
+        
+        </table>
+
+        <table>
+            <tr>
+                <th id="otherExpenses" >Other Expenses</th>
+                <td><input autocomplete="off"  required name = "otherExpense1"type="text" id="otherExepense1"  value="<%=finance.otherExpenses%>" readonly /></td> 
+            </tr>
+        
+           
+         
+
+        </table>
+
+        <table>
+            <div class="line-separator">
+        
+          
+
+        
+            <tr>
+                <th id="totalOtherExepenses ">Total Other Expenses</th>
+                <td><input autocomplete="off"  readonly name = "totalOEx1"type="text" placeholder="Total" id="totalotherExepense1"   value="<%=finance.totalOtherExpenses%>" readonly/></td> 
+
+
+            </tr>
+        </div>
+        
+        </table>
+        <div class="line-separator">
+        
+          
+
+        </div>
+
+        <table>
+        <div class="profit-loss-headers">
+          
+            <tr>
+            <th id="netIncome"> NET INCOME:</th>
+            <td><input  autocomplete="off" readonly name="netInc1" placeholder ="Total Net Income"type="text" id="total_net_income1"   value="<%=finance.netIncome%>" readonly/>  </td>
+ 
+
+
+                </tr>
+              </div>
+   
+    </table>
+        </div>
+      
+            
+</div>
+</form>
+ </main>
+  <!-- Main --> 
+
+  <script src="js/finance.js"></script>
+ </body>
+ </html>

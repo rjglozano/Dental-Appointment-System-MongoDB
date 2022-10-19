@@ -1,0 +1,39 @@
+<!-- include header -->
+<%-include('include/_profile-header-history')%>
+<!-- include header -->
+
+
+<main class="container"> 
+    <div class="col">
+        <div class="table-container">
+            <div class="table-header-container">
+                    <img class="picker-icon" src="/img/appointment 2.png">
+                    <h3 class="picker-name">Appointment History</h3>
+            </div>
+            <form action="/" method="POST">
+                <div class="my-custom-scrollbar table-wrapper-scroll-y">
+                    <table id="appointment-history" class="fixed_header">
+                        <thead class="thead-dark"> 
+                                <tr>
+                                    <th>No</th>
+                                    <th>TransactionID</th>
+                                    <th>Date</th>
+                                    <th>ToothNo</th>
+                                    <th>Services</th>
+                                    <th>Amount Paid</th>
+                                </tr>
+                        </thead>
+                        <tbody id="myTable" >
+                            <%-include('include/_show-history-user') %>
+                        </tbody>
+                        </table>
+                    </form>
+                </div>
+        </div>
+   
+    </div>
+</main>
+
+<!-- include footer -->
+<%-include('include/_footer')%>
+<!-- include footer --> 

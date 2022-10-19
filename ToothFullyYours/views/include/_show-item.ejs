@@ -1,0 +1,23 @@
+<% for(var i = 0; i < items.length; i++) { %>
+
+    <tr>
+        <td><%= i+1 %></td>
+        <td><%= items[i].itemname %></td>
+        <td><%= items[i].room %></td>
+        <td><%= items[i].model %></td>
+        <td><%= items[i].serialnumber %></td>
+        <td><%= items[i].place %></td>
+        <td><%= items[i].date %></td>
+        <td><%= items[i].quantity %></td>
+        <td> ₱ <%= items[i].price %></td>
+        <td>
+            <a href="/update-item?id=<%= items[i]._id %>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= items[i]._id %>>
+                <span class="text-gradient"><i class= "fa-solid fa-trash"></i></span>
+            </a>
+        </td>
+    </tr>
+    
+    <% } %>

@@ -1,0 +1,90 @@
+<!-- include header -->
+<%-include('include/_profile-header')%>
+<!-- include header -->
+
+
+<main class="container"> 
+    <div class="col">
+        <div class="row-1">
+            <div class="patient-photo">
+                
+                <img src="/img/edit 2.png">
+                <h1 class="profile-text">MY PROFILE</h1>
+            </div>
+            <div class="patient-profile">
+                <form action="" method="">
+                    <div class="form-group">
+                        <label class="info">Patient ID</label>
+                        <input type="text" name="name" value="<%=_id%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Full Name</label>
+                        <input type="text" name="name" value="<%=p_name%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Username</label>
+                        <input type="text" name="username" value="<%=p_username%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Email:</label>
+                        <input type="text" name="email" value="<%=p_email%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Phone:</label>
+                        <input type="number" name="phoneNum" value="0<%=p_phoneNum%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Birth Date: </label>
+                        <input type="text" name="birthDate" value="<%=p_birthDate%>"readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Age: </label>
+                        <input type="text" name="age" value="<%=p_age%>" readonly> 
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Gender: </label>
+                        <input type="text" name="gender" value="<%=p_gender%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Nationality: </label>
+                        <input type="text" name="nationality" value="<%=p_nationality%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Home Address: </label>
+                        <input type="text" name="homeAddress" value="<%=p_homeAddress%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Emergency Contact Person: </label>
+                        <input type="text" name="ECFullname" value="<%=p_ECFullname%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Emergency Contact Number: </label>
+                        <input type="number" name="ECNumber"  value="0<%=p_ECNumber%>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="info">Emergency Contact Relationship: </label>
+                        <input type="text" name="ECRelationship"  value="<%=p_ECRelationship%>" readonly>
+                    </div>
+                </form>
+                    <div class="form-group">   
+                        <a href="/edit?id=<%=_id%>">
+                            <button type="submit">Edit</button>   
+                        </a>  
+                    </div>
+                    <div class="form-group">   
+                        <a href="/view?id=<%=_id%>">
+                            <button type="submit">View History</button>   
+                        </a>  
+                    </div>           
+                   
+           
+            </div>
+        </div>
+    </div>
+   
+    </div>
+</main>
+
+<!-- include footer -->
+<%-include('include/_footer')%>
+<!-- include footer --> 

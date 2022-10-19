@@ -1,0 +1,73 @@
+<!-- include header -->
+<%- include ('include/_header-item')%>
+<!-- include header -->
+
+    <!--Main Site-->
+
+    <main id="inventory-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/Inventory"><i class="fas fa-angle-double-left"></i>All Items</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update Item</h2>
+                <span class="text-light">Use the below form to update an item</span>
+            </div>
+
+            <!--add user form-->
+            <!-- form handling-->
+            <form method="POST" id="update_item">
+                <div class="new_item">
+                    <div class="form-group">
+                        <label for="itemname" class="text-light">Item/Description</label>
+                        <input type="hidden" name="id" value="<%= item._id%>">
+                        <input type="text" name="itemname" value="<%=item.itemname %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="room" class="text-light">Room/Area</label>
+                        <input type="text" name="room" value="<%=item.room %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="model" class="text-light">Make/Model</label>
+                        <input type="text" name="model" value="<%= item.model %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="serialnumber" class="text-light">Serial Number</label>
+                        <input type="text" name="serialnumber" value="<%= item.serialnumber %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="place" class="text-light">Place of Purchase</label>
+                        <input type="text" name="place" value="<%= item.place %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="text-light">Date Purchased</label>
+                        <input type="date" name="date" value="<%= item.date%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity" class="text-light">Quantity</label>
+                        <input type="text" name="quantity" value="<%= item.quantity %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="price" class="text-light">Purchase Price</label>
+                        <input type="text" name="price" value="<%= item.price %>" placeholder="00.00">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+
+                </div> 
+                
+            </form>
+
+
+        </div>
+    </main>
+
+<!--/Main Site-->
+
+
+<!-- include footer -->
+<%- include ('include/_footer')%>
+<!-- include footer -->
