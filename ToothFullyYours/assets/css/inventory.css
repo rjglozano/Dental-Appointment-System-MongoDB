@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap');
+
+:root{
+    --navbg: #1EBEB6;
+    --bodybg: #E0F9F8;
+    --containerbg: #fff;
+    --color: #00A39A;
+    --search-barbg: #C2F4F2;
+    --gray: #ACAFBA;
+    --table-thead: #CBE5E4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Figtree', sans-serif;
+}
+
+
+.container{
+    max-width: 1550px;
+    margin: auto;
+    height: 100vh;
+}
+
+/* Header */
+header{
+    background-color: var(--navbg);
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* Navigation */
+
+nav{
+    padding: 0 2rem;
+}
+
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav ul li{
+    margin: 0 0.7rem;
+    text-align: center;
+    
+}
+
+
+nav ul li a{
+    font-weight: 700;
+    color: var(--containerbg);
+    text-decoration: none;
+   
+}
+
+nav ul li a::after{
+    content: "";
+    display: block;
+    /* margin: auto;  // It will start at mid*/ 
+    margin-top: 0.25rem;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.5s ease, background-color .5s ease;
+}
+
+nav ul li a:hover:after{
+    width: 100%;
+    background: var(--containerbg   );
+}
+
+
+.logout-btn{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 3.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--navbg);
+    background-color: var(--containerbg);
+    color: var(--navbg);
+    cursor: pointer;
+}
+
+.logout-btn:hover{
+    border: 2px solid var(--containerbg);
+    background-color: var(--navbg);
+    color: var(--containerbg);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 940px){
+    header{
+        flex-direction: column;
+    }
+
+    nav ul{
+   
+        flex-direction: column;
+    }
+    
+    nav ul li{
+   
+        margin: 2rem 0;
+    }
+    
+    header{
+        border-bottom-right-radius: 4rem ;
+    }
+}
+
+/*table text styles*/
+
+.text-center{
+    text-align: center;
+ 
+
+}
+
+.border-shadow{
+    border: 1px solid var(--gray);
+    box-shadow: 1px 3px 10px #fff;
+    margin-left: 9%;
+    cursor: pointer;
+}
+
+.text-dark{
+    color:var(--color);
+}
+
+.inline{
+    display: inline-block;
+}
+
+.text-light{
+    color:#00A39A;
+}
+
+.text-gradient{
+    background: linear-gradient(to right, #1EBEB6,#00A39A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+/* table format */
+
+.fas, a {
+    color:#00A39A;
+}
+
+#inventory-main{
+    margin-top: 4em;
+    font-family: 'Figtree', sans-serif;
+}
+
+#inventory-main .container .box-nav > a{
+    font-size: 1em;
+    padding: .5em 1em;
+}
+
+#inventory-main .container form{
+    margin: 2em 0;
+}
+
+table{
+    border: 1px solid #00A39A;
+    border-spacing: 0px;
+    min-width:500px;
+    margin: 0 auto;
+}
+
+.table td, .table th{
+    border: 1px solid #00A39A;
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px var(--containerbg);
+}
+
+.table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover{
+    background-color: #C2F4F2 ;
+}
+
+.table tr:hover td > a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: #1EBEB6;
+    border-color: #00A39A;
+}
+
+@media only screen and (max-width: 1024px){
+    table, thead, tbody, th, td, tr{
+        display: block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr{
+        border: 1px solid var(--navbg);
+    }
+    td{
+        border:none;
+        position: relative;
+    }
+}
+
+.total {
+    position: absolute;
+    top: 520px;
+    right: 500px;
+    color: #00A39A;
+}
+
+/* add item and update template */
+.form-title{
+    margin-top: 1em;
+}
+
+.form-title>h2{
+    padding: .5em 0;
+}
+
+.new_item{
+    max-width: 786px;
+    margin: auto;
+
+}
+
+#update_item .form-group,
+#add_user .form-group{
+    margin: .2em 0;
+}
+
+#update_item .form-group input[type="text"],input[type="date"],
+#add_item .form-group input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: .5em 1em;
+    margin: .4em 0;
+    border: 1px solid #1EBEB6;
+    font-family: 'Figtree', sans-serif;
+    font-size: 1em;
+    border-radius: .3em;
+}
+
+#update_item .form-group .btn,
+#add_item .form-group .btn{
+    
+    width: 100%;
+    padding: .7em 1em;
+    background-color: #1EBEB6;
+    border: none;
+    color:#fff;
+    font-family: 'Figtree', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+
+
+
+}
+
+#update_item .form-group .btn:hover,
+#add_item .form-group .btn:hover{
+    background-color: #C2F4F2;
+    color: #00A39A;
+
+
+}
+
+
+.big{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.small{
+    width: 15%;
+    margin-right: 0.5rem;
+
+
+}
+
+/*Searchh Bar */
+
+
+.search-bar{
+    border: none;
+    background-color: var(--search-barbg);
+    padding: 0.5rem 0.5rem;
+
+}
+
+input[type=text].search-bar::-webkit-input-placeholder{
+    color: var(--gray);
+    font-weight: 300;
+ 
+}
+input[type=text].search-bar{
+    color: var(--color);
+    outline: none;
+}
+
+.input-icon i {
+    position: absolute;
+}
+
+.input-icon{
+    width: 220px;
+    background-color: var(--search-barbg);
+    border-radius: 10px;
+    padding: 0 .3rem;
+    margin: 0 10%;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+
+}
+.icon {
+    padding: 8px;
+    color: var(--color);
+    min-width: 40px;
+    text-align: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+
