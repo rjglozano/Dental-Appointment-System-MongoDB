@@ -53,6 +53,26 @@ exports.update = (req, res) => {
     
 }
 
+exports.appointment = (req, res) => {
+    axios.get("http://localhost:5000/appointment-data", { params : { id : req.query.id }})
+        .then(function(response){
+            res.render('myappointment', {appoint: response.data});
+        })
+    
+    .catch(err =>{  
+        res.send(err);
+    })
+       
+}
+
+
+    
+    
+
+
+
+
+
 
 
 

@@ -8,36 +8,73 @@
             we'll take care of the rest!</p>
             <div class="input-field">
                 <input type="hidden" name="p_patientID" value="<%=p_patientID%>" readonly>
-                <input type="text" name="p_name" placeholder="Enter Full name" value="<%=p_name%>" readonly>
-                <input type="email" name="p_email" placeholder="Enter email address" value="<%=p_email %>" readonly>
-                <input type="number" name="p_phoneNum" placeholder="Enter phone number"  value="0<%=p_phoneNum%>" readonly>
-                <input type="date" name="p_ap_date" id="date" required>
-                <select name="p_ap_time" id="#" required >
-                    <option value="" disabled selected>Select your option</option>
-                    <option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
-                    <option value="11:00AM-12:00PM">11:00AM-12:00PM</option>
-                    <option value="1:00PM-2:00PM">1:00PM-2:00PM</option>>
-                    <option value="2:00PM-3:00PM">2:00PM-3:00PM</option>
-                    <option value="3:00PM-4:00PM">3:00PM-4:00PM</option>				
-                    <option value="4:00PM-5:00PM">4:00PM-5:00PM</option>
-                </select>
+       
+                <div class="input-row">
+                    <div class="label">Full Name: </div>
+                    <input type="text" name="p_name" placeholder="Enter Full name" value="<%=p_name%>" readonly>
+                   
+                </div>
+                <div class="input-row">
+                    <div class="label">Email: </div>
+                    <input type="email" name="p_email" placeholder="Enter email address" value="<%=p_email %>" readonly>
+
+                </div>
+
+                <div class="input-row">
+                    <div class="label">Phone Number: </div>
+                    <input type="number" name="p_phoneNum" placeholder="Enter phone number"  value="0<%=p_phoneNum%>" readonly>
+
+                </div>
+
+                <div class="input-row">
+                    <div class="label">Date: </div>
+                    <input type="date" name="p_ap_date" id="date" required>
+
+                </div>
+               
+               
+              
+                <div class="input-row">
+                    <div class="label">Time: </div>
+                    <select name="p_ap_time" id="#" required >
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
+                        <option value="11:00AM-12:00PM">11:00AM-12:00PM</option>
+                        <option value="1:00PM-2:00PM">1:00PM-2:00PM</option>>
+                        <option value="2:00PM-3:00PM">2:00PM-3:00PM</option>
+                        <option value="3:00PM-4:00PM">3:00PM-4:00PM</option>				
+                        <option value="4:00PM-5:00PM">4:00PM-5:00PM</option>
+                    </select>
+
+                </div>
+     
+
+                <div class="input-row">
+                    <div class="label">Procedure: </div>
+                    <select name="p_procedure" id="#" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="Fillings">Fillings</option>
+                        <option value="Root Canal">Root Canal</option>
+                        <option value="Consultation">Consultation</option>
+                        <option value="Fixing Bridge">Fixing Bridge</option>
+                        <option value="Dental Implant">Dental Implant</option>
+                        <option value="Dental Crown">Dental Crown</option>
+                        <option value="X-Ray">X-Ray</option>
+                        <option value="Teeth Whitening"> Teeth Whitening</option>
+                        <option value="Dental Brace">Dental Brace</option>
+                        <option value="Tooth Extraction">Tooth Extraction</option>
+                        <option value="Scaling">Scaling</option>						
+                        <option value="Others">Others</option>
+                    </select>
+               
+
+                </div>
+     
+
+
+               
     
-                <select name="p_procedure" id="#" required>
-                    <option value="" disabled selected>Select your option</option>
-                    <option value="Fillings">Fillings</option>
-                    <option value="Root Canal">Root Canal</option>
-                    <option value="Consultation">Consultation</option>
-                    <option value="Fixing Bridge">Fixing Bridge</option>
-                    <option value="Dental Implant">Dental Implant</option>
-                    <option value="Dental Crown">Dental Crown</option>
-                    <option value="X-Ray">X-Ray</option>
-                    <option value="Teeth Whitening"> Teeth Whitening</option>
-                    <option value="Dental Brace">Dental Brace</option>
-                    <option value="Tooth Extraction">Tooth Extraction</option>
-                    <option value="Scaling">Scaling</option>						
-                    <option value="Others">Others</option>
-                </select>
-           
+        
     
                 <button type="submit"  class="book"> BOOK</button>
             </div>    

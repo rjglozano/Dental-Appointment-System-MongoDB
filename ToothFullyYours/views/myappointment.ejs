@@ -1,0 +1,37 @@
+<%-include('include/_myappointment-header')%>
+
+
+<main class="appointment">
+    <div class="appointment-image">
+        <img src="/img/appointment-page.png">
+    </div>
+    <div class="appointment-info">
+        <h1 class="reminder-title">APPOINTMENT REMINDER</h1>
+        <p class="reminder-info">This is a reminder that you have an appointment <br> scheduled for this time and date</p>
+        <div class="reminder-container">
+          
+            <div class="reminder-row">
+                <div class="reminder-icon"> <img src="/img/date-icon.png"></div>
+                <div class="reminder-data"><input class="date-time-view" id="adate" type="text" value="<%=appoint[0].p_ap_date%>" readonly /></div>
+
+            </div>
+            <div class="reminder-row">
+                <div class="reminder-icon"><img src="/img/time-icon.png"></div>
+                <div class="reminder-data"><input class="date-time-view" type="text" value="<%=appoint[0].p_ap_time%>" readonly /></div>
+            </div>
+            <div class="reminder-row">
+                <div class="reminder-icon"><img src="/img/doctor-icon.png"></div>
+                <div class="reminder-data"><input class="date-time-view" type="text" value="Dr.Anne Nombrado" readonly /></div>
+            </div>
+            <!-- <div class="cancel-appointment">
+                <button class="cancel-btn">Cancel Appointment</button>
+            </div> -->
+
+        </div>
+        
+    </div>
+</main>
+
+<!-- include footer -->
+<%-include('include/_footer-appointment')%>
+<!-- include footer --> 

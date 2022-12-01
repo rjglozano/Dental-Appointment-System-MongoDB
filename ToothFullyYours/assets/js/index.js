@@ -347,4 +347,9 @@ $("#update_finance").submit(function(event){
 })
 
 
+function dateString(){
+    let adate = document.getElementById("adate")
+    alert(adate)
+}   
+
 

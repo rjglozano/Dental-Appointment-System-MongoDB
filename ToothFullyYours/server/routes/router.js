@@ -174,7 +174,6 @@ route.get('/myprofile',  ensureAuthenticated, services4.patientProfile);
 route.get('/edit', ensureAuthenticated, controller3.editLoad);
 route.get('/view', ensureAuthenticated, controller3.editLoad2);
 route.post('/edit', ensureAuthenticated, controller3.update);
-
 // route.get('/myprofile', ensureAuthenticated, controller3.userhistory);
 
 
@@ -211,6 +210,13 @@ route.get('/update-patient', ensureAuthenticated, services4.update)
 
 route.get('/api/patients', controller3.find);
 route.delete('/api/patients/:id', controller3.delete);
+
+
+//Route for myAppointment
+route.get('/myappointment', ensureAuthenticated, services4.appointment)
+
+
+
 
 
 

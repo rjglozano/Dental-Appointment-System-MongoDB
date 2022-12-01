@@ -50,7 +50,7 @@ nav{
     justify-content: space-between;
     background: #1EBEB6;
     z-index: 1;
-
+ 
 }
 
 .right-nav{
@@ -218,11 +218,6 @@ nav ul li a:hover:after{
 }
 
 
-
-
-
-
-
 @media only screen and (max-width: 800px){
     header{
         flex-direction: column;
@@ -247,99 +242,92 @@ nav ul li a:hover:after{
     width:100%;
     height: 100vh;
     margin: 0 auto;
-}
-
-.grid-container{
-    width:80%;
-    margin: 0 auto;
-    display: grid;
-    gap: 0.75rem;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-item{
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.grid-item:nth-child(even){
-    background-color: var(--bg-header);
-    color: var(--white);
-}
-
-.grid-item:nth-child(odd){
-    background-color: var(--white);
-    color: var(--bg-header);
-    
-}
-
-.grid-item:hover{
-    transform: scale(1.02);
 
 }
 
-.row{
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-
-@media only screen and (min-width: 550px) and (max-width: 900px){
-    .grid-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-}
-
-@media only screen and (max-width: 549px){
-    .grid-container{
-        grid-template-columns: 1fr;
-    }
-}
-
-
-
-.big{
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.small{
-    width: 15%;
-    margin-right: 0.5rem;
-
-}
-.big{
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.small{
-    width: 15%;
-    margin-right: 0.5rem;
-
-}
-
-.footer{
+.appointment{
     width: 100%;
     display: flex;
-    color: #fff;
+    justify-content: center;
+}
+
+.appointment-image, .appointment-info{
+    width: 45%;
+   
+}
+
+.appointment-info{
+    display: flex;
+    flex-direction: column;
+}
+.reminder-info{
+    color: #1EBEB6;
+    margin-top: 2rem;
+
+}
+.appointment-image img{
+    width: 75%;
+    height: 100%;
+}
+
+.reminder-title{
+    margin-top: 5rem;
+    color: #1EBEB6;
+    letter-spacing: 0.5rem;
+}
+
+
+.reminder-container{
+   
+    color: #1EBEB6;
+    font-weight: 500;
     padding: 1rem;
-    background-color: #1EBEB6;
+    border: 1px solid #1EBEB6;
+    width: 60%;
+    margin: 2rem auto;
+    border-radius: 30px;
+}
+
+.reminder-row{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.email{
-    margin: 1rem;
+.reminder-icon img{
+    width: 60px;
+   
 }
 
-.numer{
-    margin: 1rem;
+.cancel-appointment{
+    margin-top: -1rem;
+}
+.cancel-btn{
+    padding: 0.5rem 0.75rem;
+    border: none;
+    background-color: rgb(189, 70, 70);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover{
+    background-color: rgba(189, 70, 70, 0.7);
+}
+
+.schedule th img{
+    width: 60px;
+}
+
+.schedule tr td{
+    display: flex;
+}
+
+.reminder-data input[type="text"]{
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #1EBEB6;
+    font-weight: 500;
 }

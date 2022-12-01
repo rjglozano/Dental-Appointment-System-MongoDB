@@ -42,7 +42,7 @@ nav{
     position: relative;
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
 
 }
@@ -184,10 +184,12 @@ nav ul li a:hover:after{
 
 .input-field input, .input-field select{
     padding: 0.5rem 30px;
-    width: 350px;
+    width: 250px;
     border: none;
     margin: 5px 0;
-    border-radius: 15px;
+    outline: 1px solid white;
+    border-radius: 8px;
+  
 }
 
 .input-field input::placeholder, .input-field select::placeholder{
@@ -228,4 +230,16 @@ nav ul li a:hover:after{
     width: 15%;
     margin-right: 0.5rem;
 
+}
+.input-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.label{
+    color: white;
+    font-weight: 600;
+
+ 
 }

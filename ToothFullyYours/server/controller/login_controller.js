@@ -109,8 +109,6 @@ exports.editLoad2 = async(req, res)=>{
     const id = req.query.id
         const userData = await Historydb.find({p_patientID:id});
 
-
-
     try{
 
     
